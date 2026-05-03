@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Teknoy Wildcarts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 50px;
+            background: #ffffff;
+            color: #2d2d2d;
+            font-family: 'Lexend', sans-serif;
+        }
+        
+        .products-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-size: 2.2em;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+            letter-spacing: 0.5px;
+        }
+        
+        .subtitle {
+            color: #999;
+            margin-bottom: 40px;
+            font-size: 0.95em;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 1024px) {
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 28px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+        }
+        
+        .product-card {
+            background: white;
+            border: 1px solid #f0f0f0;
+            border-radius: 20px;
+            padding: 0;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 10px 28px rgba(139, 0, 0, 0.12);
+            transform: translateY(-8px);
+            border-color: #8B0000;
+        }
+        
+        .product-image {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+            border-radius: 0;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .product-image img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+        
+        .product-name {
+            color: #1a1a1a;
+            font-weight: 800;
+            font-size: 1.3em;
+            margin-bottom: 6px;
+            min-height: auto;
+            display: block;
+            letter-spacing: 0.3px;
+            padding: 12px 16px 0;
+        }
+
+        .product-description {
+            color: #999;
+            font-size: 0.85em;
+            margin-bottom: 8px;
+            line-height: 1.4;
+            min-height: 40px;
+            flex-grow: 1;
+            padding: 0 16px;
+        }
+
+        .product-price {
+            color: #8B0000;
+            font-weight: 800;
+            font-size: 1.8em;
+            letter-spacing: 0.3px;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .product-footer {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            background: white;
+        }
+
+        .btn-add {
+            background: linear-gradient(135deg, #8B0000 0%, #7A0000 100%);
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.85em;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            box-shadow: 0 4px 12px rgba(139, 0, 0, 0.3);
+            flex-shrink: 0;
+            white-space: nowrap;
+        }
+
+        .btn-add:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(139, 0, 0, 0.4);
+        }
+
+        .disclaimer {
+            color: #999;
+            font-size: 0.85em;
+            margin-top: 50px;
+            text-align: center;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="products-content">
+        <h1 class="section-title">OUR PRODUCTS</h1>
+        
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/item1.png" alt="Safety Goggles">
+                </div>
+                <div class="product-name">Women Uniform</div>
+                <p class="product-description">SHS women campus attire</p>
+                <div class="product-footer">
+                    <div class="product-price">₱480.00</div>
+                    <button class="btn-add">Order</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/item2.png" alt="Tote Bag">
+                </div>
+                <div class="product-name">Male Uniform</div>
+                <p class="product-description">SHS men campus attire</p>
+                <div class="product-footer">
+                    <div class="product-price">₱520.00</div>
+                    <button class="btn-add">Order</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/item3.png" alt="Women Uniform">
+                </div>
+                <div class="product-name">PE Pants</div>
+                <p class="product-description">Physical education uniform</p>
+                <div class="product-footer">
+                    <div class="product-price">₱480.00</div>
+                    <button class="btn-add">Order</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/item4.png" alt="Male Uniform">
+                </div>
+                <div class="product-name">PE Shorts</div>
+                <p class="product-description">Physical education uniform</p>
+                <div class="product-footer">
+                    <div class="product-price">₱610.00</div>
+                    <button class="btn-add">Order</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/item5.png" alt="PE Shorts">
+                </div>
+                <div class="product-name">PE Uniform</div>
+                <p class="product-description">Physical education uniform</p>
+                <div class="product-footer">
+                    <div class="product-price">₱480.00</div>
+                    <button class="btn-add">Order</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/item6.png" alt="PE Pants">
+                </div>
+                <div class="product-name">ID Slings</div>
+                <p class="product-description">Student ID holder</p>
+                <div class="product-footer">
+                    <div class="product-price">₱490.00</div>
+                    <button class="btn-add">Order</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/item7.png" alt="ID Slings">
+                </div>
+                <div class="product-name">Tote Bag</div>
+                <p class="product-description">Durable school bag</p>
+                <div class="product-footer">
+                    <div class="product-price">₱550.00</div>
+                    <button class="btn-add">Order</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/item8.png" alt="Buttons">
+                </div>
+                <div class="product-name">Buttons</div>
+                <p class="product-description">Uniform button sets</p>
+                <div class="product-footer">
+                    <div class="product-price">₱530.00</div>
+                    <button class="btn-add">Order</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/item9.png" alt="Lab Gown">
+                </div>
+                <div class="product-name">Lab Gown</div>
+                <p class="product-description">Laboratory protective wear</p>
+                <div class="product-footer">
+                    <div class="product-price">₱510.00</div>
+                    <button class="btn-add">Order</button>
+                </div>
+            </div>
+        </div>
+        
+        <p class="disclaimer">
+            Disclaimer: The prices and sizes displayed on this shop are for demonstration purposes only and may not reflect the actual prices or available sizes of the products.
+        </p>
+    </div>
+</body>
+</html>

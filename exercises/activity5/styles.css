@@ -1,0 +1,559 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+    color: #FFFFFF;
+    font-family: 'Lexend', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(180deg, rgba(29, 185, 84, 0.3) 0%, rgba(18, 18, 18, 0.8) 100%), 
+                linear-gradient(135deg, #1DB954 0%, #121212 100%);
+    padding: 80px 40px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 8px 24px rgba(29, 185, 84, 0.15);
+}
+
+.header h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    font-weight: 400;
+    opacity: 0.9;
+    color: #B3B3B3;
+}
+
+/* Navigation Bar - Spotify Style */
+.navbar {
+    background: #000000;
+    padding: 16px 40px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid #282828;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #B3B3B3;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-link:hover {
+    color: #FFFFFF;
+    background: rgba(29, 185, 84, 0.15);
+    transform: scale(1.05);
+}
+
+/* Hero Section - Spotify Playlist Cover Style */
+.hero {
+    background: linear-gradient(135deg, rgba(29, 185, 84, 0.2) 0%, rgba(18, 18, 18, 0.9) 50%, #121212 100%);
+    padding: 140px 40px 120px 40px;
+    text-align: center;
+    color: white;
+    margin-top: 80px;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    opacity: 0.85;
+    color: #B3B3B3;
+    font-weight: 400;
+}
+
+/* CTA Button - Spotify Style */
+.cta-button {
+    background: #1DB954;
+    color: #000000;
+    padding: 12px 48px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 500px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 8px 24px rgba(29, 185, 84, 0.3);
+}
+
+.cta-button:hover {
+    background: #1ed760;
+    transform: scale(1.08);
+    box-shadow: 0 12px 32px rgba(29, 185, 84, 0.4);
+}
+
+.cta-button:active {
+    transform: scale(0.98);
+}
+
+/* Products Section */
+.products-section {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 40px;
+}
+
+.products-section h2 {
+    text-align: left;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #FFFFFF;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Spotify Album Grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 24px;
+    margin-bottom: 60px;
+}
+
+/* Spotify Album Card Style */
+.product-card {
+    background: #181818;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    padding: 16px;
+}
+
+.product-card:hover {
+    background: #282828;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.product-image {
+    height: 200px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #282828;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.08);
+}
+
+.badge {
+    background: #1DB954;
+    color: #000000;
+    padding: 6px 12px;
+    border-radius: 500px;
+    font-weight: 700;
+    font-size: 0.75rem;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.product-info {
+    padding: 0;
+}
+
+.product-info h3 {
+    color: #FFFFFF;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 1.4;
+}
+
+.product-desc {
+    color: #B3B3B3;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.product-price {
+    color: #1DB954;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* About/Features Section - Spotify Dark */
+.about-section {
+    background: #181818;
+    padding: 80px 40px;
+    margin: 60px 0;
+    border-radius: 8px;
+}
+
+.about-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: #FFFFFF;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature {
+    background: #282828;
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid #404040;
+}
+
+.feature:hover {
+    background: #333333;
+    transform: translateY(-8px);
+    border-color: #1DB954;
+    box-shadow: 0 12px 24px rgba(29, 185, 84, 0.15);
+}
+
+.feature h3 {
+    color: #1DB954;
+    margin-bottom: 16px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.feature p {
+    color: #B3B3B3;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Newsletter Section - Spotify Green Accent */
+.newsletter-section {
+    background: linear-gradient(135deg, rgba(29, 185, 84, 0.15) 0%, rgba(29, 185, 84, 0.05) 100%), #121212;
+    color: white;
+    padding: 80px 40px;
+    text-align: center;
+    border-radius: 8px;
+    margin: 60px 40px;
+    border: 1px solid #282828;
+}
+
+.newsletter-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #1DB954;
+    letter-spacing: 1px;
+}
+
+.newsletter-section p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    color: #B3B3B3;
+}
+
+.newsletter-form {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 12px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 14px 16px;
+    border: 1px solid #404040;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: 'Lexend', sans-serif;
+    background: #282828;
+    color: #FFFFFF;
+    transition: all 0.3s ease;
+}
+
+.newsletter-form input:focus {
+    outline: none;
+    border-color: #1DB954;
+    background: #333333;
+}
+
+.newsletter-form input::placeholder {
+    color: #B3B3B3;
+}
+
+.submit-button {
+    background: #1DB954;
+    color: #000000;
+    padding: 14px 40px;
+    border: none;
+    border-radius: 500px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.submit-button:hover {
+    background: #1ed760;
+    transform: scale(1.05);
+}
+
+.submit-button:active {
+    transform: scale(0.98);
+}
+
+/* Footer - Spotify Style */
+.footer {
+    background: #000000;
+    color: white;
+    padding: 60px 40px 20px;
+    border-top: 1px solid #282828;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+}
+
+.footer-section h4 {
+    color: #1DB954;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-section p {
+    line-height: 1.8;
+    color: #B3B3B3;
+    font-size: 0.95rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section li {
+    margin-bottom: 12px;
+}
+
+.footer-section a {
+    color: #B3B3B3;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.footer-section a:hover {
+    color: #1DB954;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #282828;
+    padding-top: 20px;
+    color: #B3B3B3;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .header h1 {
+        font-size: 2.8rem;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 20px;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        gap: 20px;
+        padding: 12px 20px;
+        flex-wrap: wrap;
+        margin-top: 70px;
+    }
+
+    .header {
+        padding: 60px 20px;
+    }
+
+    .header h1 {
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+    }
+
+    .hero {
+        padding: 100px 20px 80px 20px;
+        margin-top: 0;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .products-section {
+        padding: 40px 20px;
+    }
+
+    .products-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 16px;
+    }
+
+    .product-image {
+        height: 150px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-section {
+        margin: 40px 20px;
+        padding: 60px 20px;
+    }
+
+    .footer {
+        padding: 40px 20px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px 15px;
+        gap: 15px;
+        position: fixed;
+    }
+
+    .nav-link {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+    }
+
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+
+    .hero {
+        padding: 80px 15px 60px 15px;
+    }
+
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 12px;
+    }
+
+    .product-card {
+        padding: 12px;
+    }
+
+    .product-image {
+        height: 140px;
+        margin-bottom: 12px;
+    }
+
+    .product-info h3 {
+        font-size: 0.9rem;
+    }
+
+    .product-desc {
+        font-size: 0.8rem;
+    }
+
+    .about-section {
+        padding: 60px 20px;
+    }
+
+    .about-section h2 {
+        font-size: 1.8rem;
+    }
+}

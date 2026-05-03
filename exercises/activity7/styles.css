@@ -1,0 +1,21 @@
+body{
+    display: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    padding: 200px;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+    border-radius: 8px;
+    color: white;
+    text-transform: capitalize;
+    border: solid 5px yellow;
+}
+button:hover{
+    background: red;
+    text-decoration: underline;
+}

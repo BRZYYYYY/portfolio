@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 4</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root{--accent:#ffffff;--muted:#6b7280;--bg1:#f6f9ff}
+        html,body{height:100%;}
+        body{
+            margin:0;
+            font-family: 'Lexend', sans-serif;
+            background: linear-gradient(135deg,var(--bg1) 0%, #eef6ff 100%);
+            color:#0f1724;
+            padding:40px 20px;
+            -webkit-font-smoothing:antialiased;
+        }
+        h2 { 
+            font-size: 1.5em;
+            text-align: center; 
+            color: var(--accent); 
+            margin-bottom: 18px; 
+            font-weight: 600; 
+            position: relative; 
+            z-index: 1001;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+        #userForm{
+            position:fixed;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background:rgba(0,0,0,0.5);
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            z-index:1000;
+        }
+        form{
+            background:#ffffff;
+            max-width:640px;
+            padding:22px;
+            border-radius:12px;
+            box-shadow:0 8px 30px rgba(11,63,145,0.06);
+            margin:0;
+        }
+        
+    </style>
+</head>
+<body>
+    <h2>USER INFORMATION FORM</h2>
+
+    <div id="userForm">
+    <form action="" method="post">
+
+        <label for="fname"><b>First Name:</b></label>
+        <input type="text" id="fname" name="fname" required><br><br>
+        <label for="lname"><b>Last Name:</b></label>
+        <input type="text" id="lname" name="lname" required><br><br>
+        <label for="age"><b>Age:</b></label>
+        <input type="number" id="age" name="age" required><br><br>
+
+        <label for="gender"><b>Gender:</b></label><br>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">♂️Male</label>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">♀️Female</label>
+        <input type="radio" id="other" name="gender" value="other" required>
+        <label for="other">🌈Other</label><br><br>
+
+        <label for="hobbies"><b>Hobbies:</b></label> <br>
+        <input type="checkbox" name="hobbies" id="hobby1" value="reading">
+        <label for="hobby1">📖 Reading</label> <br>
+        <input type="checkbox" name="hobbies" id="hobby2" value="gaming">
+        <label for="hobby2">🎮 Gaming</label><br>
+        <input type="checkbox" name="hobbies" id="hobby3" value="sports">
+        <label for="hobby3">⚽ Sports</label><br>
+        <input type="checkbox" name="hobbies" id="hobby4" value="music">
+        <label for="hobby4">🎵 Music</label><br><br>
+
+        <label for="year-level"><b>Year Level:</b></label>
+        <select id="year-level" name="year-level" required>
+            <option value="choose">Choose:
+            </option>
+            <option value="1st-year">1st Year</option>
+            <option value="2nd-year">2nd Year</option>
+            <option value="3rd-year">3rd Year</option>
+            <option value="4th-year">4th Year</option>
+        </select><br><br>
+
+        <button type="submit">Submit</button>
+        <button type="submit">Clear</button>
+
+        
+    </form>
+    </div>
+</body>
+</html>
